@@ -1,9 +1,9 @@
-class NegociacaoView {
+class NegociacaoView extends View {
     constructor(elemento) {
-        this._elemento = elemento
+        super(elemento)
     }
 
-    _render(model) {
+    render(model) {
         return `<table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
@@ -39,7 +39,4 @@ class NegociacaoView {
                 `
     }
 
-    update(model) {
-        this._elemento.innerHTML = this._render(model)
-    }
 }

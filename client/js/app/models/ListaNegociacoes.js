@@ -1,13 +1,18 @@
 class ListaNegociacoes {
-    constructor() {
+    constructor(atualiza) {
         this._negociacoes = []
+        this._atualiza = atualiza
+    }
+
+    get negociacoes() {
+        return this._negociacoes
     }
 
     adiciona(negociacao) {
         this._negociacoes.push(negociacao)
     }
 
-    get negociacoes() {
-        return this._negociacoes
+    esvazia(negociacao) {
+        this._negociacoes = []
     }
 }
